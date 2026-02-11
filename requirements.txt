@@ -1,0 +1,5 @@
+sqlalchemy
+dotenv
+aiohttp
+aiofiles
+pillow
