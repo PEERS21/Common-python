@@ -1,6 +1,5 @@
-from dotenv import dotenv_values
+from os import getenv
 import hmac
 import hashlib
-config = dotenv_values("/run/secrets/common_python")
 def make_hmac(token: str) -> str:
-    return hmac.new(config.get("SECRET_KEY", "").encode('utf-8'), token.encode('utf-8'), hashlib.sha256).hexdigest()
+    return hmac.new(getenv("SECRET_KEY", "").encode('utf-8'), token.encode('utf-8'), hashlib.sha256).hexdigest()
