@@ -6,8 +6,8 @@ from aiohttp.web_request import Request
 from sqlalchemy import select, and_
 from sqlalchemy.exc import SQLAlchemyError
 
-from db_init import AsyncSessionLocal
-from db_models import IssuedToken
+from .db_init import AsyncSessionLocal
+from .db_models import IssuedToken
 import os
 import time
 
