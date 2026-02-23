@@ -29,7 +29,6 @@ class Item(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, server_default=func.now())
 
     categories: Mapped[list[int]] = mapped_column(MutableList.as_mutable(JSON), default=list)
-    available: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
 
     available: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
 
