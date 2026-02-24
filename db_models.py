@@ -18,10 +18,6 @@ class Item(Base):
     title: Mapped[str] = mapped_column(String(255), nullable=True)
     content: Mapped[str] = mapped_column(Text, nullable=True)
 
-    img_filename: Mapped[str] = mapped_column(String(512), nullable=True)
-    img_width: Mapped[int] = mapped_column(Integer, nullable=True)
-    img_height: Mapped[int] = mapped_column(Integer, nullable=True)
-
     client_img_filename: Mapped[str] = mapped_column(String(512), nullable=True)
     client_img_width: Mapped[int] = mapped_column(Integer, nullable=True)
     client_img_height: Mapped[int] = mapped_column(Integer, nullable=True)
